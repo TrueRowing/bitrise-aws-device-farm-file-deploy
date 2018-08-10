@@ -45,19 +45,19 @@ inputs:
       description: |
         If you want to specify a different AWS region. Leave
         empty to use the default config/env setting.
-  - device_farm_project: ""
+  - device_farm_project: "$DEVICE_FARM_PROJECT"
     opts:
       title: "Device Farm Project ARN"
       summary: ""
       description: "Project ARNs can be obtained using the [AWS CLI](https://aws.amazon.com/cli/) `devicefarm list-projects` command."
       is_required: true
-  - upload_file_path: ""
+  - upload_file_path: "$DEVICE_FARM_UPLOAD_FILE_PATH"
     opts:
       title: "Upload File Path"
       summary: ""
       description: "Path of file to upload. If this is a test package, [aws-device-farm-runner](https://github.com/peartherapeutics/bitrise-aws-device-farm-runner) can be configured to use the latest package with this name."
       is_required: true
-  - upload_type: ""
+  - upload_type: "$DEVICE_FARM_UPLOAD_FILE_TYPE"
     opts:
       title: "Upload Type"
       summary: ""
