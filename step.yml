@@ -51,11 +51,17 @@ inputs:
       summary: ""
       description: "Project ARNs can be obtained using the [AWS CLI](https://aws.amazon.com/cli/) `devicefarm list-projects` command."
       is_required: true
-  - upload_file_path: "$DEVICE_FARM_UPLOAD_FILE_PATH"
+  - upload_file_path: "$IOS_UPLOAD_FILE_PATH"
     opts:
-      title: "Upload File Path"
+      title: "iOS Upload File Path"
       summary: ""
-      description: "Path of file to upload. If this is a test package, [aws-device-farm-runner](https://github.com/peartherapeutics/bitrise-aws-device-farm-runner) can be configured to use the latest package with this name."
+      description: "iOS path of file to upload. If this is a test package, [aws-device-farm-runner](https://github.com/peartherapeutics/bitrise-aws-device-farm-runner) can be configured to use the latest package with this name."
+      is_required: true
+  - upload_file_path: "$ANDROID_UPLOAD_FILE_PATH"
+    opts:
+      title: "Android Upload File Path"
+      summary: ""
+      description: "Android path of file to upload. If this is a test package, [aws-device-farm-runner](https://github.com/peartherapeutics/bitrise-aws-device-farm-runner) can be configured to use the latest package with this name."
       is_required: true
   - upload_type: "$DEVICE_FARM_UPLOAD_FILE_TYPE"
     opts:
